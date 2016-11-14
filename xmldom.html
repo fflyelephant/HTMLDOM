@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript" src="./common.js"></script>
+<script>
+window.onload = function(){	
+	var xmltext = "<root><child/></root>";
+	var xmlPath = "./books.xml";
+	var path = "bookstore/book1/price/stone";
+	var path1 = "bookstore/stone"
+	var xmlD = new XmlDocument();
+
+	var xmldom1 = xmlD.LoadXMLfile(xmlPath);//load file 只有在IE上可执行，其它浏览器的document.implementation.createDocument方法有问题
+
+	var value = xmldom1.GetNodeValue(path1);
+	alert(value);
+
+	xmldom1.SetNodeValue(path1,"111");
+
+	var value = xmldom1.GetNodeValue(path1);
+	alert(value);
+};
+</script>
+<title>Test</title>
+<body >
+<p>hello</p>
+<p>world</p>
+</body>
+</head>
+</html>

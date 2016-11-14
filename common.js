@@ -10,7 +10,7 @@ XmlDocument.prototype = {
 		{
 			try{
 				new ActiveXObject(ActiveXObjversions[i]);
-			    activeXString = ActiveXObjversions[i];
+			    	activeXString = ActiveXObjversions[i];
 				break;
 			}catch(ex){
 				alert("Can not create ActiveObj: " + ActiveXObjversions[i]);
